@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="street" class="com.fdmgroup.SpringExample.Street">
+  	<constructor-arg value="blank" index="1" />
+  	<constructor-arg value="road" index="0"/>
+  </bean>
+  <bean id="address" class="com.fdmgroup.SpringExample.Address">
+    <constructor-arg ref="street"/>
+    <constructor-arg value="0"/>
+  </bean>
+  <bean id="house" class="com.fdmgroup.SpringExample.House">
+  	<property name="address" ref="address"/>
+  </bean>
+  <bean id="commercial" class="com.fdmgroup.SpringExample.OfficeBuilding">
+  	<property name="address" ref="address"/>
+  </bean>
+</beans>
