@@ -1,0 +1,4 @@
+Welcome To My Page <br>
+Here is my Text that comes from my fragment.jspf file. <br>
+	
+<% out.print("Text from an expression"); %>

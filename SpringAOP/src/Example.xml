@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+ <bean id="conLog" class="SpringAOP.ConsoleLog" />
+ <bean id="cA" class="SpringAOP.ClassA" />
+ <bean id="cB" class="SpringAOP.ClassB" />
+
+<aop:config>
+ 
+ 	<!-- Pointcut for every method invocation -->
+  	<aop:pointcut id="everything" expression="execution(* *(..))" />
+ 	<aop:pointcut id="method2Only" expression="execution(* method2(..))" />
+ 	<aop:pointcut id="ClassBReturnTypeOnly" 
+ 		expression="execution(SpringAOP.ClassB SpringAOP.ClassB.*(..))" />
+
+  	<!-- After returning advice -->
+  	<aop:aspect id="consoleLog" ref="conLog">
+  
+   		<aop:before pointcut-ref="everything" method="displayEntry" />
+   		<aop:before pointcut-ref="method2Only" method="displayEntryMethod2" />
+   		<aop:after pointcut-ref="ClassBReturnTypeOnly" method="displayReturnClassB" />
+		<!-- <aop:around pointcut-ref="everything" method="aroundCall"/> -->
+		
+  	</aop:aspect>
+  	
+ </aop:config>
+ 
+<!-- <aop:aspectj-autoproxy/> -->
+
+ 
+</beans>

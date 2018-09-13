@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<network>
+<line name="Circle">
+<station>Kings Cross</station>
+<station>Farringdon</station>
+<station>Liverpool Street</station>
+<station>Aldgate</station>
+<station>Tower Hill</station>
+<station>Elephant</station>
+<station>Embankment</station>
+<station>Slone Square</station>
+<station>Notting Hill</station>
+<station>Bayswater</station>
+<station>Baker Street</station>
+<station>Euston</station>
+<station>Kings Cross</station>
+</line>
+<line name="District">
+<station>Kew</station>
+<station>Notting Hill</station>
+<station>Knightsbridge</station>
+<station>London Bridge</station>
+<station>Bank</station>
+<station>Moorgate</station>
+<station>Liverpool Street</station>
+<station>Bethnel Green</station>
+</line>
+<line name="Metropolitan">
+<station>Finchley</station>
+<station>Baker Street</station>
+<station>Regents Park</station>
+<station>Leicester Square</station>
+<station>Bank</station>
+<station>Chancery Lane</station>
+<station>Tower Hill</station>
+<station>Mile End</station>
+</line>
+<line name="NorthernEast">
+<station>Edgeware</station>
+<station>Camden</station>
+<station>Kings Cross</station>
+<station>Angel</station>
+<station>Bank</station>
+<station>Borough</station>
+<station>Elephant</station>
+<station>Stockwell</station>
+</line>
+<line name="NorthernWest">
+<station>Edgeware</station>
+<station>Camden</station>
+<station>Euston</station>
+<station>Leicester Square</station>
+<station>London Bridge</station>
+<station>Charing Cross</station>
+<station>Embankment</station>
+<station>Stockwell</station>
+</line>
+</network>
